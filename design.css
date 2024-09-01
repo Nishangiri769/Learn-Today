@@ -14,7 +14,6 @@ body {
 .menu {
     background-color: #333;
     padding: 10px;
-    position: relative;
 }
 
 .menu h1.logo {
@@ -30,11 +29,11 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Adjust to distribute items */
+    justify-content: flex-end;
 }
 
 .menu ul li {
-    margin: 0;
+    margin-left: 20px;
     position: relative;
 }
 
@@ -43,6 +42,11 @@ body {
     text-decoration: none;
     padding: 10px;
     display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+    border-radius: 4px;
 }
 
 /* Dropdown Menu */
@@ -131,27 +135,26 @@ body {
 @media screen and (max-width: 768px) {
     .menu ul {
         flex-direction: column;
-        align-items: stretch; /* Full width items */
+        align-items: flex-start;
     }
 
     .menu ul li {
         width: 100%;
+        text-align: left;
+        margin-left: 0;
     }
 
     .menu ul li a {
         width: 100%;
-        text-align: center; /* Center text on small screens */
-        padding: 15px; /* Increase padding for better touch target */
+        text-align: left;
     }
 
     .menu ul li .drop_menu, .menu ul li .bar_menu {
-        position: static; /* Dropdowns should flow with the content */
-        width: 100%; /* Ensure dropdown takes full width */
-        display: none; /* Hide by default */
+        position: static;
     }
 
     .menu ul li:hover .drop_menu, .menu ul li:hover .bar_menu {
-        display: block; /* Show dropdown on hover */
+        display: none;
     }
 
     .menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
@@ -160,11 +163,11 @@ body {
 
     /* Help Section Adjustments for Smaller Screens */
     .help a {
-        font-size: 3rem; /* Adjust font size for small screens */
+        font-size: 3rem;
     }
 
     .htxt {
-        font-size: 1.25rem; /* Adjust font size for small screens */
+        font-size: 1.25rem;
     }
 }
 
