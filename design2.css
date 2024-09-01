@@ -8,6 +8,10 @@ ul {
     gap: 10px;
 }
 
+ul li {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
 ul li a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
