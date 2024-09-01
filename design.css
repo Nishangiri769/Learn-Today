@@ -1,186 +1,165 @@
-/* Basic Reset */
-* {
+/* General Styles */
+body {
+    background-color: #eed264;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Responsive Menu */
 .menu {
-    background-color: #333;
-    padding: 10px;
+    background-color: #000000;
+    height: auto; /* Adjusted for responsiveness */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Ensure menu items wrap on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
 }
 
-.menu h1.logo {
-    color: white;
-    display: inline-block;
-    margin: 0;
-    font-size: 24px;
+.menu .logo {
+    color: rgb(226, 187, 187);
+    font-size: 1.5em; /* Responsive font size */
+    padding: 10px 0;
+}
+
+.menu .logo span {
+    color: rgb(111, 255, 63);
 }
 
 .menu ul {
+    display: flex;
+    flex-wrap: wrap; /* Wrap menu items on smaller screens */
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .menu ul li {
-    margin-left: 20px;
     position: relative;
+    padding: 10px; /* Adjusted for responsiveness */
 }
 
 .menu ul li a {
-    color: white;
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 1em; /* Responsive font size */
+    background-color: #ffffff;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .menu ul li a:hover {
-    background-color: #444;
-    border-radius: 4px;
+    background-color: #56cab4;
+    color: #f2f2f2;
+    padding-left: 15px;
 }
 
-/* Dropdown Menu */
-.menu ul li .drop_menu, .menu ul li .bar_menu {
+.drop_menu, .bar_menu {
     display: none;
+}
+
+.menu ul li:hover .drop_menu,
+.menu ul li:hover .bar_menu {
+    display: block;
+}
+
+.drop_menu, .bar_menu {
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 4px;
+    top: 100%;
+    background-color: #000000;
+    border-radius: 12px;
+    z-index: 1000;
 }
 
-.menu ul li:hover .drop_menu, .menu ul li:hover .bar_menu {
-    display: block;
-}
-
-.menu ul li .drop_menu ul, .menu ul li .bar_menu ul {
-    display: block;
-    margin: 0;
-    padding: 0;
+.drop_menu ul, .bar_menu ul {
     list-style-type: none;
+    padding: 0;
 }
 
-.menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
-    margin: 0;
+.drop_menu ul li a, .bar_menu ul li a {
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 0.9em; /* Responsive font size */
 }
 
-.menu ul li .drop_menu ul li a, .menu ul li .bar_menu ul li a {
-    padding: 10px;
-    display: block;
+.drop_menu ul li a:hover, .bar_menu ul li a:hover {
+    color: hsl(61, 100%, 61%);
 }
 
-.menu ul li .drop_menu ul li a:hover, .menu ul li .bar_menu ul li a:hover {
-    background-color: #444;
-}
-/* Help Section */
-.help {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+/* Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000000;
     text-align: center;
+    padding: 10px;
 }
 
-.help a {
-    font-size: 4rem;
-    color: #555; /* Icon color */
-    margin-bottom: 20px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.help a:hover {
-    color: #000; /* Darker on hover */
-}
-
-.htxt {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
-    color: #333; /* Text color */
-}
-
-/* Back Link */
-.back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.back a {
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    color: black;
-    font-size: 1.25rem;
-}
-
-.back a:hover {
-    color: red;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
+/* Responsive Styles */
+@media (max-width: 768px) {
     .menu ul {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .menu ul li {
-        width: 100%;
-        text-align: left;
-        margin-left: 0;
+        padding: 10px 0;
     }
 
     .menu ul li a {
-        width: 100%;
-        text-align: left;
-    }
-
-    .menu ul li .drop_menu, .menu ul li .bar_menu {
-        position: static;
-    }
-
-    .menu ul li:hover .drop_menu, .menu ul li:hover .bar_menu {
-        display: none;
-    }
-
-    .menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
-        width: 100%;
+        padding: 10px;
+        font-size: 1em;
     }
 }
 
-/* Footer Styling */
-footer {
+@media (max-width: 480px) {
+    .menu .logo {
+        font-size: 1.2em;
+    }
+
+    .menu ul li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .pdf-container {
+        padding-top: 75%; /* Adjusted for smaller screens */
+    }
+}
+
+/* Additional styles for specific content */
+p {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #08339e;
 }
 
-/* PDF Embed Styling */
-.pdf-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+p:hover {
+    color: #fd0a0a;
+}
+
+.about, .admin, .back {
+    padding: 20px;
+    font-size: 1em;
+}
+
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
 }
 
 .pdf-embed {
     width: 100%;
-    height: 100%;
-    border: none;
+    height: 80vh; /* Adjust for viewport height */
 }
