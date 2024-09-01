@@ -163,26 +163,21 @@ img {
     width: 100%;
     height: 80vh; /* Adjust for viewport height */
 }
+/* design.css */
 
-..me {
-    display: flex;
-    flex-direction: column; /* Stack text and icon vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center;/* Center vertically if needed */
-    text-align: center;
+.me {
+    text-align: center; /* Center-aligns text and inline elements within the div */
 }
 
-.fnd {
-    font-size: 1.2em; /* Adjust font size as needed */
-    margin-bottom: 10px; /* Space between text and icon */
+.me .fnd {
+    margin-bottom: 10px; /* Adds some space between "Find me on" and the icon */
 }
 
 .me a {
-    font-size: 2em; /* Adjust icon size as needed */
-    color: black;   /* Adjust icon color as needed */
-    transition: color 0.3s ease;
+    display: inline-block; /* Ensures the link is treated as an inline block */
+    text-decoration: none; /* Optional: Removes underline from the link */
 }
 
-.me a:hover {
-    color: #56cab4; /* Change color on hover if needed */
+.me i {
+    font-size: 24px; /* Adjusts the size of the icon */
 }
