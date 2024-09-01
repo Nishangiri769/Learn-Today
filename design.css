@@ -42,7 +42,7 @@ body {
 
 .menu ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     display: flex;
     align-items: center;
     padding: 10px 20px; /* Adjusted padding */
@@ -81,7 +81,7 @@ body {
 }
 
 .drop_menu ul li a, .bar_menu ul li a {
-    color: #ffffff;
+    color: #000000;
     padding: 10px 20px;
     font-size: 0.9em; /* Responsive font size */
 }
