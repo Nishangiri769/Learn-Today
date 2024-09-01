@@ -163,3 +163,20 @@ img {
     width: 100%;
     height: 80vh; /* Adjust for viewport height */
 }
+
+.me {
+    text-align: center; /* Center-aligns text and inline elements within the div */
+}
+
+.me .fnd {
+    margin-bottom: 10px; /* Adds some space between "Find me on" and the icon */
+}
+
+.me a {
+    display: inline-block; /* Ensures the link is treated as an inline block */
+    text-decoration: none; /* Optional: Removes underline from the link */
+}
+
+.me i {
+    font-size: 24px; /* Adjusts the size of the icon */
+}
