@@ -1,339 +1,196 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
 
-background-color: #eed264;
-background-size: cover;
-
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-
-.logo{
-
-color:rgb(226, 187, 187);
-padding-right: 20px;
-
-
-}
-.logo span{
-
-color:rgb(111, 255, 63)
-
-}
-.logo:hover{
-color: blanchedalmond;
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-}
+/* Responsive Menu */
 .menu {
-    background-color:#000000;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
+    background-color: #333;
+    padding: 10px;
+}
 
+.menu h1.logo {
+    color: white;
+    display: inline-block;
+    margin: 0;
+    font-size: 24px;
 }
 
 .menu ul {
-    display: flex;
     list-style-type: none;
-    text-align: center;
-
-
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-
-
-
-    
-
 .menu ul li {
+    margin-left: 20px;
     position: relative;
-    padding:20px 30px;
-  
-
-
 }
 
 .menu ul li a {
+    color: white;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.menu ul li .drop_menu, .menu ul li .bar_menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.menu ul li:hover .drop_menu, .menu ul li:hover .bar_menu {
+    display: block;
+}
+
+.menu ul li .drop_menu ul, .menu ul li .bar_menu ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
+    margin: 0;
+}
+
+.menu ul li .drop_menu ul li a, .menu ul li .bar_menu ul li a {
+    padding: 10px;
+    display: block;
+}
+
+.menu ul li .drop_menu ul li a:hover, .menu ul li .bar_menu ul li a:hover {
+    background-color: #444;
+}
+
+/* Help Section */
+.help {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-left: 50px;
-    font-family: monospace;
-    font-size: 30px;
-}
-
-.menu ul li a:hover{
-
-color: rgba(127, 255, 72, 0.982);
-
-
-
-}
-
-.menu ul li:hover .drop_menu {
-    display: block;
-}
-
-.drop_menu {
-    padding-right:10px;
-    padding-left: 10px;
-    display: none;
-    position: absolute;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    top: 100%;
-    background-color:#000000;
-    z-index: 1000; /* Ensure the dropdown appears above other elements */
-}
-.drop_menu:hover {
-    background-color: #56cab4; /* Soft teal background on hover */
-    color: #f2f2f2; /* Light text color on hover */
-    padding-left: 60px; /* Slight padding increase on hover for a dynamic effect */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-    transform: translateX(10px); /* Slight move to the right on hover */
-}
-
-.bar_menu{
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  
-}
-.bar_menu:hover {
-    background-color: #56cab4; /* Soft teal background on hover */
-    color: #f2f2f2; /* Light text color on hover */
-    padding-left: 0px; /* Slight padding increase on hover for a dynamic effect */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-    transform: translateX(10px); /* Slight move to the right on hover */
-}
-
-.drop_menu ul {
-    list-style-type: none;
-    display: block;
-    
-    
-}
-
-.drop_menu ul li a {
-    color: rgb(255, 255, 255);
-padding: 1px;
-font-size: 20px;
-    display:flex;
-    
-    line-height: 7px;
-   
-}
-
-.drop_menu ul li a:hover {
-    color: hsl(61, 100%, 61%);
-    
-}
-
-/* Adjustments for the caret icon */
-.menu ul li i {
-    margin-left: 5px;
-}
-
-/* Clearfix to contain floated elements */
-.menu:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-p{
-text-align: center;
-padding-top: 200px;
-padding-right: 200px;
-
-
-font-size: 40px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-color: #08339e;
-
-}
-p:hover{
-color:#fd0a0a
-
-
-}
-footer {
-    position: fixed;
-    left:0px;
-    bottom: 20px; /* Adjust the space at the bottom as needed */
-    width: 100%;
-    color: #000000;
+    justify-content: center;
+    padding: 20px;
     text-align: center;
-  
-    
 }
 
-
-
-
-.menu ul li:hover .bar_menu {
-    display: block;
-}
-.bar_menu {
-    
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color:#000000;
-    z-index: 1000; /* Ensure the dropdown appears above other elements */
-}
-.bar_menu ul {
-    list-style-type: none;
-    display: block;
-  
+.help a {
+    font-size: 4rem;
+    color: #555; /* Icon color */
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.bar_menu ul li a {
-    color: hsl(0, 100%, 99%);
-    padding: 1px;
-font-size: 20px;
-    display: inline-flex;
-    line-height: 7px;
-    
-    
-}
-
-
-
-.bar_menu ul li a:hover {
-    color:hsl(61, 100%, 61%);
-}
-
-/* Adjustments for the caret icon */
-.bar_menu ul li i {
-    margin-left: 5px;
-}
-.about{
-
-
-
-
-    color: #000000;
-    font-size: 17px;
-    padding-left:15px;
-    padding-right:10px;
-    font-size:bold;
-
-}
-.baack {
-    font-weight: bold;
-    font-size: 30px;
-    padding-top: 200px;
-}
-
-.baack a:hover {
-    color: rgb(248, 0, 0);
-    padding-left: 10px;
-}
-
-.admin p {
-    text-align: justify;
-    font-weight:bold;
-    font-size: 25px;
-color:rgb(0, 0, 0);
-padding-top: 20px;
-padding-left: 20px;
-font-family:monospace;
-}
-.me{
-font-family:monospace;
-color:blue;
-text-align: center;
-font-weight: bold;
-font-size:50px;
-padding-bottom:10px;
-padding-top:250px;
-}
-.back {
-    font-weight: bold;
-    font-size: 30px;
-    padding-top:10px;
-}
-.back a:hover {
-    color: rgb(248, 0, 0);
-    padding-left: 10px;
-}
-.cont{
-text-align: center;}
-
-
-img{
-padding-top: 20px;
-height: 400px;
-width:300px;
-
-}
-   .me .fnd {
-    text-align: center;
-    font-size: 20px;
-font-family:monospace;
-}
-.help{
-line-height: 200px;
-font-size:60px;
-    text-align: center;
+.help a:hover {
+    color: #000; /* Darker on hover */
 }
 
 .htxt {
-    font-family: Arial, sans-serif; /* Choose your preferred font */
-    font-size: 30px; /* Adjust the font size */
-    color: #000000; /* Set the text color */
-    text-align: center; /* Align the text in the center */
-    font-weight: bolder;
-}
-.htxt:hover{
-
-
-    color:blue
-}
-.menu .bar i{
-
-    font-size: 20px;
-}
-.menu i{
-
-
-    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: #333; /* Text color */
 }
 
-.dropdown i{
-
-    font-size: 20px;
-   
+/* Back Link */
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
-.bar_menu ul li i{
 
-
-    font-size:18px;
-    position: relative;
-} .menu i{
-
-position:relative;
-
-
+.back a {
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: black;
+    font-size: 1.25rem;
 }
-.pdf-container {
-    position: relative;
+
+.back a:hover {
+    color: red;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .menu ul li a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu ul li .drop_menu, .menu ul li .bar_menu {
+        position: static;
+    }
+
+    .menu ul li:hover .drop_menu, .menu ul li:hover .bar_menu {
+        display: none;
+    }
+
+    .menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
+        width: 100%;
+    }
+
+    /* Help Section Adjustments for Smaller Screens */
+    .help a {
+        font-size: 3rem;
+    }
+
+    .htxt {
+        font-size: 1.25rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
     width: 100%;
-    padding-top: 56.25%; /* Aspect ratio: 16:9 (change as needed) */
-  }
-  
-  .pdf-embed {
-    position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+}
+
+/* PDF Embed Styling */
+.pdf-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.pdf-embed {
     width: 100%;
     height: 100%;
-  }
-  
+    border: none;
+}
