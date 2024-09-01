@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+    gap: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #e0e0e0;
+    color: red;
+}
