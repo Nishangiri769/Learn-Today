@@ -83,54 +83,6 @@ body {
     background-color: #444;
 }
 
-/* Help Section */
-.help {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-}
-
-.help a {
-    font-size: 4rem;
-    color: #555; /* Icon color */
-    margin-bottom: 20px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.help a:hover {
-    color: #000; /* Darker on hover */
-}
-
-.htxt {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
-    color: #333; /* Text color */
-}
-
-/* Back Link */
-.back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.back a {
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    color: black;
-    font-size: 1.25rem;
-}
-
-.back a:hover {
-    color: red;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .menu ul {
@@ -159,15 +111,6 @@ body {
 
     .menu ul li .drop_menu ul li, .menu ul li .bar_menu ul li {
         width: 100%;
-    }
-
-    /* Help Section Adjustments for Smaller Screens */
-    .help a {
-        font-size: 3rem;
-    }
-
-    .htxt {
-        font-size: 1.25rem;
     }
 }
 
