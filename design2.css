@@ -4,12 +4,12 @@ ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+    flex-wrap: wrap; 
     gap: 10px;
 }
 
 ul li {
-    margin-top: 70px; /* Adjust this value as needed */
+    margin-top: 70px; 
 }
 
 ul li a {
