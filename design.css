@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     background-color: #eed264;
     font-family: Arial, sans-serif;
@@ -8,10 +8,10 @@ body {
 
 .menu {
     background-color: #000000;
-    height: auto; /* Adjusted for responsiveness */
+    height: auto; 
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Ensure menu items wrap on smaller screens */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
@@ -19,7 +19,7 @@ body {
 
 .menu .logo {
     color: rgb(226, 187, 187);
-    font-size: 1.5em; /* Responsive font size */
+    font-size: 1.5em; 
     padding: 10px 0;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .menu ul {
     display: flex;
-    flex-wrap: wrap; /* Wrap menu items on smaller screens */
+    flex-wrap: wrap; 
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -37,7 +37,7 @@ body {
 
 .menu ul li {
     position: relative;
-    padding: 10px; /* Adjusted for responsiveness */
+    padding: 10px; 
 }
 
 .menu ul li a {
@@ -45,8 +45,8 @@ body {
     color: #000000;
     display: flex;
     align-items: center;
-    padding: 10px 20px; /* Adjusted padding */
-    font-size: 1em; /* Responsive font size */
+    padding: 10px 20px; 
+    font-size: 1em;
     background-color: #ffffff;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -83,7 +83,7 @@ body {
 .drop_menu ul li a, .bar_menu ul li a {
     color: #000000;
     padding: 10px 20px;
-    font-size: 0.9em; /* Responsive font size */
+    font-size: 0.9em;
 }
 
 .drop_menu ul li a:hover, .bar_menu ul li a:hover {
@@ -133,11 +133,11 @@ footer {
     }
 
     .pdf-container {
-        padding-top: 75%; /* Adjusted for smaller screens */
+        padding-top: 75%; 
     }
 }
 
-/* Additional styles for specific content */
+
 p {
     text-align: center;
     padding: 20px;
@@ -155,29 +155,29 @@ p:hover {
 }
 
 img {
-    max-width: 100%; /* Responsive image */
+    max-width: 100%;
     height: auto;
 }
 
 .pdf-embed {
     width: 100%;
-    height: 80vh; /* Adjust for viewport height */
+    height: 80vh; 
 }
-/* design.css */
+
 
 .me {
-    text-align: center; /* Center-aligns text and inline elements within the div */
+    text-align: center; 
 }
 
 .me .fnd {
-    margin-bottom: 10px; /* Adds some space between "Find me on" and the icon */
+    margin-bottom: 10px; 
 }
 
 .me a {
-    display: inline-block; /* Ensures the link is treated as an inline block */
-    text-decoration: none; /* Optional: Removes underline from the link */
+    display: inline-block;
+    text-decoration: none; 
 }
 
 .me i {
-    font-size: 24px; /* Adjusts the size of the icon */
+    font-size: 24px;
 }
